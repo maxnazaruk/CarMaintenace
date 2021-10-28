@@ -1,3 +1,5 @@
+package com.softserve.maintenance;
+
 import java.util.List;
 
 public class SparePart {

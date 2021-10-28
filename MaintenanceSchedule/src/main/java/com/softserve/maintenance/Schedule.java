@@ -1,3 +1,5 @@
+package com.softserve.maintenance;
+
 import java.util.*;
 
 public class Schedule {

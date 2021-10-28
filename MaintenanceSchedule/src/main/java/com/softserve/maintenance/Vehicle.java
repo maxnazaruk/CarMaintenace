@@ -1,3 +1,5 @@
+package com.softserve.maintenance;
+
 public class Vehicle {
     String model;
     String owner;

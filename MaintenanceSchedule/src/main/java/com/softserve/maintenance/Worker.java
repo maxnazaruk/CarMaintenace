@@ -1,3 +1,5 @@
+package com.softserve.maintenance;
+
 public class Worker {
     String firstName;
     String lastName;
