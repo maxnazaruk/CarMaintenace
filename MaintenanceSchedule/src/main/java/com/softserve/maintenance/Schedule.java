@@ -1,11 +1,12 @@
 package com.softserve.maintenance;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Schedule {
 
-    List<Order> orders;
-    int view;
+    private List<Order> orders;
+    private int view;
 
     public List<Order> getOrders() {
         return orders;
@@ -31,7 +32,7 @@ public class Schedule {
         Collections.sort(orders, new Comparator<Order>() {
             @Override
             public int compare(Order o1, Order o2) {
-                return o1.startDate.compareTo(o2.startDate);
+                return o1.getStartDate().compareTo(o2.getStartDate());
             }
         });
     }
@@ -40,7 +41,7 @@ public class Schedule {
         Collections.sort(orders, new Comparator<Order>() {
             @Override
             public int compare(Order o1, Order o2) {
-                return o2.complexity - o1.complexity;
+                return o1.getComplexity() - o2.getComplexity();
             }
         });
     }
@@ -49,7 +50,7 @@ public class Schedule {
         Collections.sort(orders, new Comparator<Order>() {
             @Override
             public int compare(Order o1, Order o2) {
-                return o1.workers.size() - o2.workers.size();
+                return o1.getWorkers().size() - o2.getWorkers().size();
             }
         });
     }
@@ -58,7 +59,7 @@ public class Schedule {
         Collections.sort(orders, new Comparator<Order>() {
             @Override
             public int compare(Order o1, Order o2) {
-                return o1.endDate.compareTo(o2.endDate);
+                return o1.getEndDate().compareTo(o2.getEndDate());
             }
         });
     }
@@ -67,7 +68,7 @@ public class Schedule {
         Collections.sort(orders, new Comparator<Order>() {
             @Override
             public int compare(Order o1, Order o2) {
-                return o1.price - o2.price;
+                return o1.getPrice() - o2.getPrice();
             }
         });
     }

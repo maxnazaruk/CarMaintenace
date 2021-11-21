@@ -1,8 +1,8 @@
 package com.softserve.maintenance;
 
 public class Worker {
-    String firstName;
-    String lastName;
+    private String firstName;
+    private String lastName;
 
     public String getFirstName() {
         return firstName;

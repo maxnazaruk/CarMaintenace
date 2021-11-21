@@ -1,9 +1,9 @@
 package com.softserve.maintenance;
 
 public class Vehicle {
-    String model;
-    String owner;
-    String VIN;
+    private String model;
+    private String owner;
+    private String VIN;
 
     public String getModel() {
         return model;

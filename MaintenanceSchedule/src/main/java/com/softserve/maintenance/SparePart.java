@@ -3,17 +3,19 @@ package com.softserve.maintenance;
 import java.util.List;
 
 public class SparePart {
-    List<Vehicle> vehicles;
-    int number;
-    int cost;
-    String name;
+    private List<Vehicle> vehicles;
+    private int number;
+    private int cost;
+    private String name;
 
     public void addSparePart(int number){
         this.number += number;
     }
 
     public void removeSparePart(int number){
-        this.number -= number;
+        if(number > 0){
+            this.number -= number;
+        }
     }
 
     public List<Vehicle> getVehicles() {
